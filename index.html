@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Femmora – Herramientas Digitales Premium para Mujeres Emprendedoras</title>
+  <meta name="description" content="Femmora ofrece productos digitales premium – diarios, planners y recursos estratégicos diseñados para mujeres con visión que buscan claridad, estrategia y elegancia en su negocio." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcementBar">
+    <span data-i18n="announcement">✦ Productos Digitales Para Mujeres Emprendedoras ✦</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <button class="nav-burger" id="burger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+      <li><a href="#catalogo" data-i18n="nav_catalogo">Catálogo</a></li>
+      <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+    </ul>
+
+    <a href="index.html" class="nav-logo" aria-label="Femmora – Inicio">
+      <span class="logo-text">FEMMORA</span>
+    </a>
+
+    <div class="nav-right">
+      <button class="nav-icon-btn" aria-label="Buscar" id="searchBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Mi cuenta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </button>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="es" id="btnEs">ES</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en" id="btnEn">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 1: HERO
+  ══════════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <img src="images/hero.png" alt="Femmora – Herramientas digitales para mujeres con visión" class="hero-img" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow" data-i18n="hero_eyebrow">HERRAMIENTAS PARA MUJERES CON VISIÓN</span>
+      <h1 class="hero-title">
+        <span data-i18n="hero_line1">Diseña tu visión.</span><br>
+        <em data-i18n="hero_line2">Construye tu marca.</em><br>
+        <span data-i18n="hero_line3">Eleva tu vida.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">
+        Productos digitales premium para mujeres que buscan claridad, estrategia y elegancia en cada paso de su negocio.
+      </p>
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn btn-primary" id="hero-cta-btn">
+          <span data-i18n="hero_cta">EXPLORAR LA COLECCIÓN</span> →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 2: MISSION BANNER + SPLIT
+  ══════════════════════════════════════════════ -->
+  <div class="mission-banner">
+    <span data-i18n="banner_text">INTENCIÓN EN LO QUE HACES. ELEGANCIA EN CÓMO LO VIVES.</span>
+  </div>
+
+  <section class="mission-section" id="sobre-nosotras">
+    <div class="section-inner mission-inner">
+      <div class="mission-left reveal">
+        <span class="eyebrow" data-i18n="mission_eyebrow">NUESTRA MISIÓN</span>
+        <h2 class="section-title mission-headline" data-i18n="mission_headline">
+          Ayudamos a las mujeres a desarrollar su potencial, fortalecer su marca y crear una vida alineada con sus valores.
+        </h2>
+        <p class="mission-body" data-i18n="mission_body">
+          Creamos recursos digitales elegantes y estratégicos que inspiran crecimiento, confianza e intención. Femmora es más que una marca. Es un estándar.
+        </p>
+        <a href="#" class="btn btn-outline-dark" data-i18n="mission_cta">CONOCE MÁS SOBRE NOSOTRAS →</a>
+      </div>
+      <div class="mission-right reveal">
+        <img src="images/mission.png" alt="Ambiente elegante Femmora – velas, flores y diarios" class="mission-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 3: PRODUCT GRID
+  ══════════════════════════════════════════════ -->
+  <section class="products-section" id="catalogo">
+    <div class="section-inner">
+      <div class="products-header reveal">
+        <h2 class="products-main-title" data-i18n="products_title">Diseñados para la mujer que construye sus sueños</h2>
+        <span class="eyebrow products-eyebrow" data-i18n="products_subtitle">DIARIOS PARA TU CRECIMIENTO</span>
+      </div>
+
+      <div class="products-grid">
+
+        <div class="product-card reveal">
+          <div class="product-img-wrap">
+            <span class="badge-nuevo" data-i18n="badge_nuevo">NUEVO</span>
+            <img src="images/product1.png" alt="Diario Estrategia de marca" class="product-card-img" />
+            <div class="product-img-overlay">
+              <a href="#" class="btn btn-primary btn-sm" data-i18n="card_cta">VER PRODUCTO →</a>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-title" data-i18n="prod1_title">Diario "Estrategia de marca"</h3>
+            <p class="product-card-price" data-i18n="prod1_price">€24,00 EUR</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-img-wrap">
+            <span class="badge-nuevo" data-i18n="badge_nuevo">NUEVO</span>
+            <img src="images/product2.png" alt="Diario Éxito alineado" class="product-card-img" />
+            <div class="product-img-overlay">
+              <a href="#" class="btn btn-primary btn-sm" data-i18n="card_cta">VER PRODUCTO →</a>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-title" data-i18n="prod2_title">Diario "Éxito alineado"</h3>
+            <p class="product-card-price" data-i18n="prod2_price">€24,00 EUR</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-img-wrap">
+            <span class="badge-nuevo" data-i18n="badge_nuevo">NUEVO</span>
+            <img src="images/product3.png" alt="Diario Mentalidad empresarial" class="product-card-img" />
+            <div class="product-img-overlay">
+              <a href="#" class="btn btn-primary btn-sm" data-i18n="card_cta">VER PRODUCTO →</a>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-title" data-i18n="prod3_title">Diario "Mentalidad empresarial"</h3>
+            <p class="product-card-price" data-i18n="prod3_price">€24,00 EUR</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 4: CREATIVE STUDIO PROMO
+  ══════════════════════════════════════════════ -->
+  <section class="studio-section" id="creative-studio">
+    <div class="section-inner studio-inner">
+      <div class="studio-left reveal">
+        <span class="studio-brand">FEMMORA</span>
+        <span class="studio-label">creative studio</span>
+        <p class="studio-desc" data-i18n="studio_desc">
+          Plantillas y recursos listos para usar que te ayudan a mostrar tu negocio con profesionalismo y ahorrar tiempo valioso.
+        </p>
+        <a href="#" class="btn btn-outline-dark studio-cta" data-i18n="studio_cta">DESCUBRE CREATIVE STUDIO →</a>
+        <div class="studio-badge-pill" data-i18n="studio_badge">
+          DISEÑADO PARA AHORRAR TIEMPO. CREADO PARA ELEVAR TU MARCA.
+        </div>
+      </div>
+      <div class="studio-right reveal">
+        <img src="images/studio.png" alt="Femmora Creative Studio – plantillas digitales" class="studio-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 5: BENEFITS BANNER (5 columns)
+  ══════════════════════════════════════════════ -->
+  <section class="benefits-section" id="beneficios">
+    <div class="benefits-inner">
+
+      <div class="benefit-item reveal">
+        <span class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <h3 class="benefit-title" data-i18n="benefit1_title">ELEVA TU MARCA</h3>
+        <p class="benefit-text" data-i18n="benefit1_text">Materiales estratégicos y estéticos que reflejan tu visión única.</p>
+      </div>
+
+      <div class="benefit-item reveal">
+        <span class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <h3 class="benefit-title" data-i18n="benefit2_title">AHORRA TIEMPO Y ENERGÍA</h3>
+        <p class="benefit-text" data-i18n="benefit2_text">Plantillas listas para usar que te permiten enfocarte en lo que realmente importa.</p>
+      </div>
+
+      <div class="benefit-item reveal">
+        <span class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        <h3 class="benefit-title" data-i18n="benefit3_title">ESTRATEGIA CON BELLEZA</h3>
+        <p class="benefit-text" data-i18n="benefit3_text">Cada diseño viene con una intención estratégica y atención al detalle.</p>
+      </div>
+
+      <div class="benefit-item reveal">
+        <span class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3 class="benefit-title" data-i18n="benefit4_title">HECHO PARA MUJERES EMPRENDEDORAS</h3>
+        <p class="benefit-text" data-i18n="benefit4_text">Recursos creados con empatía, elegancia y una comprensión real.</p>
+      </div>
+
+      <div class="benefit-item reveal">
+        <span class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </span>
+        <h3 class="benefit-title" data-i18n="benefit5_title">CRECE CON CONFIANZA</h3>
+        <p class="benefit-text" data-i18n="benefit5_text">Herramientas que apoyan tu crecimiento, tus metas y tu libertad.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer id="contacto">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">FEMMORA</span>
+        <p data-i18n="footer_tagline">Productos digitales premium para mujeres con visión. Una marca. Un estándar.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" class="footer-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest" class="footer-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.33-.236.995.499 1.806 1.476 1.806 1.771 0 3.135-1.867 3.135-4.561 0-2.386-1.715-4.054-4.162-4.054-2.834 0-4.496 2.124-4.496 4.32 0 .855.33 1.771.741 2.271a.3.3 0 0 1 .069.284c-.075.313-.245.995-.279 1.134-.045.183-.149.222-.344.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.967-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="footer-social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_nav_title">Navegación</h4>
+        <ul>
+          <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+          <li><a href="#catalogo" data-i18n="nav_catalogo">Catálogo</a></li>
+          <li><a href="#creative-studio">Creative Studio</a></li>
+          <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_legal_title">Legal</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer_privacy">Política de Privacidad</a></li>
+          <li><a href="#" data-i18n="footer_terms">Términos y Condiciones</a></li>
+          <li><a href="#" data-i18n="footer_refund">Política de Reembolso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_copy">© 2025 Femmora. Todos los derechos reservados.</span>
+      <div style="display:flex;gap:1.5rem">
+        <a href="#" data-i18n="footer_privacy">Privacidad</a>
+        <a href="#" data-i18n="footer_terms">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
