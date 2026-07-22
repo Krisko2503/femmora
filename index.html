@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,100 +14,96 @@
 
 <body>
 
-  <!-- ══════════════════════════════════════════════
-       NAVBAR
-  ══════════════════════════════════════════════ -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-
-    <!-- Left links -->
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home">HOME</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#shop">SHOP</a></li>
+      <li><a href="#home"      data-i18n="nav_home">INICIO</a></li>
+      <li><a href="#about"     data-i18n="nav_about">NOSOTRAS</a></li>
+      <li><a href="#shop"      data-i18n="nav_shop">TIENDA</a></li>
     </ul>
-
-    <!-- Center logo -->
     <a href="#home" class="nav-logo" aria-label="Femmora – Home">
       <img src="images/logo_trans.png" alt="Femmora" class="logo-img" id="logoImg" />
     </a>
-
-    <!-- Right links -->
     <ul class="nav-links nav-links-right">
-      <li><a href="#resources">RESOURCES</a></li>
-      <li><a href="#reviews">REVIEWS</a></li>
-      <li><a href="#letters">LETTERS</a></li>
+      <li><a href="#resources" data-i18n="nav_resources">RECURSOS</a></li>
+      <li><a href="#reviews"   data-i18n="nav_reviews">RESENAS</a></li>
+      <li><a href="#letters"   data-i18n="nav_letters">CARTAS</a></li>
+      <li>
+        <div class="lang-switcher" id="langSwitcher" aria-label="Language selector">
+          <span class="lang-btn" data-lang="bg" id="lang-bg" tabindex="0">BG</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-btn" data-lang="es" id="lang-es" tabindex="0">ES</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-btn" data-lang="en" id="lang-en" tabindex="0">EN</span>
+        </div>
+      </li>
     </ul>
-
-    <!-- Mobile burger -->
     <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-
   </nav>
 
-  <!-- Mobile full-screen menu -->
+  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">X</button>
     <ul>
-      <li><a href="#home"      class="mobile-link">HOME</a></li>
-      <li><a href="#about"     class="mobile-link">ABOUT</a></li>
-      <li><a href="#shop"      class="mobile-link">SHOP</a></li>
-      <li><a href="#resources" class="mobile-link">RESOURCES</a></li>
-      <li><a href="#reviews"   class="mobile-link">REVIEWS</a></li>
-      <li><a href="#letters"   class="mobile-link">LETTERS</a></li>
+      <li><a href="#home"      class="mobile-link" data-i18n="nav_home">INICIO</a></li>
+      <li><a href="#about"     class="mobile-link" data-i18n="nav_about">NOSOTRAS</a></li>
+      <li><a href="#shop"      class="mobile-link" data-i18n="nav_shop">TIENDA</a></li>
+      <li><a href="#resources" class="mobile-link" data-i18n="nav_resources">RECURSOS</a></li>
+      <li><a href="#reviews"   class="mobile-link" data-i18n="nav_reviews">RESENAS</a></li>
+      <li><a href="#letters"   class="mobile-link" data-i18n="nav_letters">CARTAS</a></li>
     </ul>
+    <div class="lang-switcher lang-switcher--mobile" id="langSwitcherMobile" aria-label="Language selector">
+      <span class="lang-btn" data-lang="bg" tabindex="0">BG</span>
+      <span class="lang-sep">|</span>
+      <span class="lang-btn" data-lang="es" tabindex="0">ES</span>
+      <span class="lang-sep">|</span>
+      <span class="lang-btn" data-lang="en" tabindex="0">EN</span>
+    </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       HERO — Uses header_baner.JPG as its own image.
-       background: transparent so body's fixed
-       background.JPG is also visible behind the overlay.
-  ══════════════════════════════════════════════ -->
+  <!-- HERO -->
   <section class="hero" id="home">
-    <!-- Hero uses header_baner.JPG as primary image -->
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content reveal">
-      <span class="hero-eyebrow">✦ DIGITAL RESOURCES &amp; TOOLS FOR WOMEN ENTREPRENEURS ✦</span>
+      <span class="hero-eyebrow" data-i18n="hero_eyebrow">Recursos digitales y herramientas para emprendedoras</span>
       <h1 class="hero-title">
-        Build the business.<br>
-        <em>Design the brand.</em><br>
-        Become the Woman.
+        <span data-i18n="hero_line1">Disena tu vision.</span><br>
+        <em data-i18n="hero_line2">Construye tu marca.</em><br>
+        <span data-i18n="hero_line3">Eleva tu vida.</span>
       </h1>
-      <p class="hero-sub">
-        Premium digital tools, strategy and mindset to help you build a business you truly love.
+      <p class="hero-sub" data-i18n="hero_sub">
+        Herramientas digitales premium, estrategia y mentalidad para ayudarte a construir un negocio que verdaderamente amas.
       </p>
       <div class="hero-actions">
-        <a href="#shop"  class="btn btn-primary"       id="hero-shop-btn">EXPLORE THE COLLECTION →</a>
-        <a href="#about" class="btn btn-outline-cream"  id="hero-about-btn">OUR STORY</a>
+        <a href="#shop"  class="btn btn-primary"      id="hero-shop-btn"  data-i18n="hero_btn_explore">EXPLORAR LA COLECCION</a>
+        <a href="#about" class="btn btn-outline-cream" id="hero-about-btn" data-i18n="hero_btn_story">NUESTRA HISTORIA</a>
       </div>
     </div>
     <div class="scroll-indicator" aria-hidden="true"><span class="scroll-line"></span></div>
   </section>
 
-  <!-- ══ PARALLAX GAP — background.JPG peeks through ══ -->
+  <!-- PARALLAX GAP -->
   <div class="parallax-gap"></div>
 
-  <!-- ══════════════════════════════════════════════
-       DIVIDER BANNER
-  ══════════════════════════════════════════════ -->
+  <!-- DIVIDER BANNER -->
   <div class="divider-banner" id="about">
     <div class="divider-inner">
-      <span class="divider-ornament">✦</span>
-      <p class="divider-main">DIGITAL RESOURCES &amp; TOOLS FOR WOMEN ENTREPRENEURS</p>
-      <span class="divider-dash">—</span>
-      <p class="divider-sub">Strategy, design and mindset to build a business you love.</p>
-      <span class="divider-ornament">✦</span>
+      <span class="divider-ornament">*</span>
+      <p class="divider-main" data-i18n="divider_main">RECURSOS DIGITALES Y HERRAMIENTAS PARA EMPRENDEDORAS</p>
+      <span class="divider-dash">-</span>
+      <p class="divider-sub" data-i18n="divider_sub">Estrategia, diseno y mentalidad para construir el negocio que amas.</p>
+      <span class="divider-ornament">*</span>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       THE 3 PILLARS
-  ══════════════════════════════════════════════ -->
+  <!-- THE 3 PILLARS -->
   <section class="pillars-section" id="shop">
     <div class="pillars-header reveal">
-      <span class="eyebrow eyebrow-burgundy">THE THREE PILLARS</span>
-      <h2 class="section-title">Everything you need to rise.</h2>
+      <span class="eyebrow eyebrow-burgundy" data-i18n="pillars_eyebrow">LOS TRES PILARES</span>
+      <h2 class="section-title" data-i18n="pillars_title">Todo lo que necesitas para elevarte.</h2>
     </div>
     <div class="pillars-grid">
 
@@ -119,16 +115,16 @@
         </div>
         <div class="pillar-body">
           <span class="pillar-num">01</span>
-          <h3 class="pillar-title">FEMMORA<br><em>Business</em></h3>
-          <p class="pillar-tag">Build the business.</p>
+          <h3 class="pillar-title">FEMMORA<br><em data-i18n="pillar1_name">Business</em></h3>
+          <p class="pillar-tag" data-i18n="pillar1_tag">Construye el negocio.</p>
           <ul class="pillar-list">
-            <li>Business strategy frameworks</li>
-            <li>Revenue planning guides</li>
-            <li>Launch blueprint templates</li>
-            <li>Pricing &amp; offer architecture</li>
-            <li>Marketing &amp; content roadmaps</li>
+            <li data-i18n="pillar1_li1">Marcos de estrategia empresarial</li>
+            <li data-i18n="pillar1_li2">Guias de planificacion de ingresos</li>
+            <li data-i18n="pillar1_li3">Plantillas de lanzamiento</li>
+            <li data-i18n="pillar1_li4">Precios y arquitectura de ofertas</li>
+            <li data-i18n="pillar1_li5">Hojas de ruta de marketing y contenido</li>
           </ul>
-          <a href="#" class="btn btn-outline-cream" id="pillar1-btn">EXPLORE →</a>
+          <a href="#" class="btn btn-outline-cream" id="pillar1-btn" data-i18n="pillar_explore_btn">EXPLORAR</a>
         </div>
       </div>
 
@@ -140,16 +136,16 @@
         </div>
         <div class="pillar-body">
           <span class="pillar-num">02</span>
-          <h3 class="pillar-title">FEMMORA<br><em>Creative Studio</em></h3>
-          <p class="pillar-tag">Design the brand.</p>
+          <h3 class="pillar-title">FEMMORA<br><em data-i18n="pillar2_name">Creative Studio</em></h3>
+          <p class="pillar-tag" data-i18n="pillar2_tag">Disena la marca.</p>
           <ul class="pillar-list">
-            <li>Brand identity templates</li>
-            <li>Social media design kits</li>
-            <li>Canva &amp; Figma resources</li>
-            <li>Mood board guides</li>
-            <li>Visual storytelling tools</li>
+            <li data-i18n="pillar2_li1">Plantillas de identidad de marca</li>
+            <li data-i18n="pillar2_li2">Kits de diseno para redes sociales</li>
+            <li data-i18n="pillar2_li3">Recursos de Canva y Figma</li>
+            <li data-i18n="pillar2_li4">Guias de mood board</li>
+            <li data-i18n="pillar2_li5">Herramientas de narrativa visual</li>
           </ul>
-          <a href="#" class="btn btn-outline-dark" id="pillar2-btn">EXPLORE →</a>
+          <a href="#" class="btn btn-outline-dark" id="pillar2-btn" data-i18n="pillar_explore_btn">EXPLORAR</a>
         </div>
       </div>
 
@@ -161,194 +157,178 @@
         </div>
         <div class="pillar-body">
           <span class="pillar-num">03</span>
-          <h3 class="pillar-title">FEMMORA<br><em>CEO</em></h3>
-          <p class="pillar-tag">Become the woman.</p>
+          <h3 class="pillar-title">FEMMORA<br><em data-i18n="pillar3_name">CEO</em></h3>
+          <p class="pillar-tag" data-i18n="pillar3_tag">Conviertete en la mujer.</p>
           <ul class="pillar-list">
-            <li>CEO mindset journals</li>
-            <li>Morning ritual planners</li>
-            <li>Confidence &amp; identity work</li>
-            <li>Leadership frameworks</li>
-            <li>Vision &amp; legacy mapping</li>
+            <li data-i18n="pillar3_li1">Diarios de mentalidad CEO</li>
+            <li data-i18n="pillar3_li2">Planificadores de rituales matutinos</li>
+            <li data-i18n="pillar3_li3">Trabajo de confianza e identidad</li>
+            <li data-i18n="pillar3_li4">Marcos de liderazgo</li>
+            <li data-i18n="pillar3_li5">Mapeo de vision y legado</li>
           </ul>
-          <a href="#" class="btn btn-outline-cream" id="pillar3-btn">EXPLORE →</a>
+          <a href="#" class="btn btn-outline-cream" id="pillar3-btn" data-i18n="pillar_explore_btn">EXPLORAR</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ══ PARALLAX GAP ══ -->
+  <!-- PARALLAX GAP -->
   <div class="parallax-gap parallax-gap--lg"></div>
 
-  <!-- ══════════════════════════════════════════════
-       MISSION SECTION
-  ══════════════════════════════════════════════ -->
+  <!-- MISSION SECTION -->
   <section class="mission-section" id="resources">
     <div class="mission-inner">
-
       <div class="mission-left reveal">
-        <span class="eyebrow eyebrow-burgundy">OUR MISSION</span>
-        <blockquote class="mission-quote">
-          We help women build businesses with purpose and become the women they're meant to be.
+        <span class="eyebrow eyebrow-burgundy" data-i18n="mission_eyebrow">NUESTRA MISION</span>
+        <blockquote class="mission-quote" data-i18n="mission_quote">
+          Ayudamos a las mujeres a construir negocios con proposito y a convertirse en las mujeres que estan destinadas a ser.
         </blockquote>
         <div class="mission-rule"></div>
       </div>
-
       <div class="mission-body-col reveal">
-        <p class="mission-body">
-          Femmora is more than a shop — it's a movement for women who refuse to choose between ambition and elegance. We believe your business should reflect the full power of who you are.
+        <p class="mission-body" data-i18n="mission_body1">
+          Femmora es mas que una tienda. Es un movimiento para mujeres que se niegan a elegir entre ambicion y elegancia. Creemos que tu negocio debe reflejar todo el poder de quien eres.
         </p>
-        <p class="mission-body">
-          Every resource we create is designed with intention. From strategy guides that clarify your vision, to brand tools that make you look unmistakably professional, to CEO journals that strengthen your inner world.
+        <p class="mission-body" data-i18n="mission_body2">
+          Cada recurso que creamos esta disenado con intencion. Desde guias de estrategia que clarifican tu vision, hasta herramientas de marca que te hacen lucir inconfundiblemente profesional, hasta diarios CEO que fortalecen tu mundo interior.
         </p>
-        <a href="#" class="btn btn-primary" id="mission-cta-btn">LEARN MORE ABOUT US →</a>
+        <a href="#" class="btn btn-primary" id="mission-cta-btn" data-i18n="mission_cta">SABER MAS SOBRE NOSOTRAS</a>
       </div>
-
       <div class="mission-img-col reveal">
         <div class="mission-img-wrap">
           <img src="images/mission.png" alt="Woman with coffee, embodying the Femmora spirit" class="mission-img" />
           <div class="mission-badge">
-            <span>EST.</span>
+            <span data-i18n="mission_badge_est">EST.</span>
             <span class="mission-badge-year">2024</span>
             <span>FEMMORA</span>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       FAQ ACCORDION
-  ══════════════════════════════════════════════ -->
+  <!-- FAQ ACCORDION -->
   <section class="faq-section">
     <div class="faq-inner">
-
       <div class="faq-header reveal">
-        <span class="eyebrow eyebrow-burgundy">QUESTIONS &amp; ANSWERS</span>
-        <h2 class="section-title">Everything you've been wondering.</h2>
+        <span class="eyebrow eyebrow-burgundy" data-i18n="faq_eyebrow">PREGUNTAS Y RESPUESTAS</span>
+        <h2 class="section-title" data-i18n="faq_title">Todo lo que has estado preguntando.</h2>
       </div>
-
       <div class="faq-layout">
         <div class="faq-list">
 
           <div class="faq-item reveal">
             <button class="faq-q" aria-expanded="false" aria-controls="fa1">
-              <span>What types of products does Femmora offer?</span>
+              <span data-i18n="faq1_q">Que tipos de productos ofrece Femmora?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" id="fa1" role="region">
-              <p>Femmora offers premium digital resources including business strategy guides, brand identity templates, CEO mindset journals, marketing roadmaps, and done-for-you Canva kits. All products are instantly downloadable.</p>
+              <p data-i18n="faq1_a">Femmora ofrece recursos digitales premium que incluyen guias de estrategia empresarial, plantillas de identidad de marca, diarios de mentalidad CEO, hojas de ruta de marketing y kits de Canva listos para usar. Todos los productos son de descarga inmediata.</p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-q" aria-expanded="false" aria-controls="fa2">
-              <span>Who are Femmora products designed for?</span>
+              <span data-i18n="faq2_q">Para quien estan disenados los productos de Femmora?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" id="fa2" role="region">
-              <p>Femmora is built for women entrepreneurs at every stage — whether you're just starting, scaling to six figures, or rebranding. If you want strategy, beauty, and a CEO mindset in one place, you're home.</p>
+              <p data-i18n="faq2_a">Femmora esta creado para emprendedoras en cada etapa, ya sea que estes comenzando, escalando a seis cifras o haciendo un rebranding. Si quieres estrategia, belleza y mentalidad CEO en un solo lugar, estas en casa.</p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-q" aria-expanded="false" aria-controls="fa3">
-              <span>How do I access my products after purchase?</span>
+              <span data-i18n="faq3_q">Como accedo a mis productos despues de la compra?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" id="fa3" role="region">
-              <p>Immediately after checkout, you'll receive an email with your download link. All products are delivered as high-resolution PDFs or editable Canva/Figma files. Your tools are ready the moment you need them.</p>
+              <p data-i18n="faq3_a">Inmediatamente despues del pago, recibiras un correo electronico con tu enlace de descarga. Todos los productos se entregan como PDFs de alta resolucion o archivos editables de Canva/Figma.</p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-q" aria-expanded="false" aria-controls="fa4">
-              <span>Do you offer refunds on digital products?</span>
+              <span data-i18n="faq4_q">Ofrecen reembolsos en productos digitales?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" id="fa4" role="region">
-              <p>Due to the digital nature of our products, all sales are final. However, if you experience any technical issues accessing your purchase, our support team is here to help. We stand behind the quality of everything we create.</p>
+              <p data-i18n="faq4_a">Debido a la naturaleza digital de nuestros productos, todas las ventas son definitivas. Sin embargo, si experimentas algun problema tecnico, nuestro equipo de soporte esta aqui para ayudarte.</p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-q" aria-expanded="false" aria-controls="fa5">
-              <span>What is Femmora Letters?</span>
+              <span data-i18n="faq5_q">Que es Femmora Letters?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-a" id="fa5" role="region">
-              <p>Femmora Letters is our weekly newsletter — a curated blend of business strategy, mindset insights, brand inspiration, and exclusive subscriber-only offers. Your personal mentor, delivered straight to your inbox.</p>
+              <p data-i18n="faq5_a">Femmora Letters es nuestro boletin semanal. Una mezcla curada de estrategia empresarial, perspectivas de mentalidad, inspiracion de marca y ofertas exclusivas para suscriptoras. Tu mentora personal, entregada directamente a tu bandeja de entrada.</p>
             </div>
           </div>
 
         </div>
-
         <div class="faq-img-col reveal">
           <img src="images/hero.png" alt="Femmora workspace" class="faq-img" />
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══ PARALLAX GAP ══ -->
+  <!-- PARALLAX GAP -->
   <div class="parallax-gap parallax-gap--md"></div>
 
-  <!-- ══════════════════════════════════════════════
-       REVIEWS
-  ══════════════════════════════════════════════ -->
+  <!-- REVIEWS -->
   <section class="reviews-section" id="reviews">
     <div class="reviews-inner">
-
       <div class="reviews-header reveal">
-        <span class="eyebrow eyebrow-burgundy">TESTIMONIALS</span>
+        <span class="eyebrow eyebrow-burgundy" data-i18n="reviews_eyebrow">TESTIMONIOS</span>
         <h2 class="section-title reviews-title">
-          LOVED BY WOMEN<br><em>LIKE YOU</em>
+          <span data-i18n="reviews_title">AMADA POR MUJERES</span><br><em data-i18n="reviews_title_em">COMO TU</em>
         </h2>
-        <div class="reviews-stars-row" aria-label="5 stars">★★★★★</div>
+        <div class="reviews-stars-row" aria-label="5 stars">*****</div>
       </div>
-
       <div class="reviews-grid">
 
         <div class="review-card reveal">
-          <div class="review-stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="review-text">
-            "Femmora completely transformed how I approach my brand. The templates are elegant, professional, and saved me weeks of work. I finally feel like the CEO I've always wanted to be."
+          <div class="review-stars" aria-label="5 stars">*****</div>
+          <blockquote class="review-text" data-i18n="review1_text">
+            Femmora transformo completamente como gestiono mi marca. Las plantillas son elegantes, profesionales y me ahorraron semanas de trabajo. Por fin me siento la CEO que siempre quise ser.
           </blockquote>
           <div class="review-author">
             <div class="review-avatar">S</div>
             <div>
-              <strong>Sofia M.</strong>
-              <span>Brand Strategist, London</span>
+              <strong data-i18n="review1_name">Sofia M.</strong>
+              <span data-i18n="review1_role">Estratega de Marca, Londres</span>
             </div>
           </div>
         </div>
 
         <div class="review-card review-card--dark reveal">
-          <div class="review-stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="review-text">
-            "I've tried so many planners and resources. Nothing compares to the depth and beauty of what Femmora offers. The CEO journal alone changed my entire morning routine and mindset."
+          <div class="review-stars" aria-label="5 stars">*****</div>
+          <blockquote class="review-text" data-i18n="review2_text">
+            He probado tantos planificadores y recursos. Nada se compara con la profundidad y belleza de lo que ofrece Femmora. El diario CEO por si solo cambio toda mi rutina matutina y mentalidad.
           </blockquote>
           <div class="review-author">
             <div class="review-avatar">A</div>
             <div>
-              <strong>Alejandra R.</strong>
-              <span>Online Coach, Miami</span>
+              <strong data-i18n="review2_name">Alejandra R.</strong>
+              <span data-i18n="review2_role">Coach Online, Miami</span>
             </div>
           </div>
         </div>
 
         <div class="review-card reveal">
-          <div class="review-stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="review-text">
-            "From the moment I discovered Femmora, I knew this was different. These aren't just templates — they're a complete system for becoming the woman and entrepreneur I was always meant to be."
+          <div class="review-stars" aria-label="5 stars">*****</div>
+          <blockquote class="review-text" data-i18n="review3_text">
+            Desde el momento en que descubri Femmora, supe que esto era diferente. Estas no son solo plantillas, son un sistema completo para convertirme en la mujer y empresaria que siempre estuve destinada a ser.
           </blockquote>
           <div class="review-author">
             <div class="review-avatar">N</div>
             <div>
-              <strong>Natalie K.</strong>
-              <span>Creative Director, Paris</span>
+              <strong data-i18n="review3_name">Natalie K.</strong>
+              <span data-i18n="review3_role">Directora Creativa, Paris</span>
             </div>
           </div>
         </div>
@@ -357,30 +337,26 @@
     </div>
   </section>
 
-  <!-- ══ PARALLAX GAP ══ -->
+  <!-- PARALLAX GAP -->
   <div class="parallax-gap parallax-gap--sm"></div>
 
-  <!-- ══════════════════════════════════════════════
-       NEWSLETTER — FEMMORA LETTERS
-  ══════════════════════════════════════════════ -->
+  <!-- NEWSLETTER -->
   <section class="newsletter-section" id="letters">
     <div class="newsletter-inner">
-
       <div class="newsletter-img-col reveal">
         <img src="images/studio.png" alt="Femmora Letters newsletter" class="newsletter-img" />
       </div>
-
       <div class="newsletter-content reveal">
-        <span class="eyebrow eyebrow-burgundy">JOIN THE INNER CIRCLE</span>
+        <span class="eyebrow eyebrow-burgundy" data-i18n="newsletter_eyebrow">UNETE AL CIRCULO INTIMO</span>
         <h2 class="newsletter-title">FEMMORA<br><em>LETTERS</em></h2>
-        <p class="newsletter-desc">
-          Weekly inspiration, strategy and tools delivered to your inbox. No noise — only what a woman building her empire truly needs.
+        <p class="newsletter-desc" data-i18n="newsletter_desc">
+          Inspiracion semanal, estrategia y herramientas entregadas a tu bandeja de entrada. Sin ruido, solo lo que una mujer que construye su imperio verdaderamente necesita.
         </p>
         <ul class="newsletter-perks">
-          <li>✦ Exclusive subscriber-only discounts</li>
-          <li>✦ Weekly business strategy insights</li>
-          <li>✦ First access to new product drops</li>
-          <li>✦ CEO mindset &amp; lifestyle content</li>
+          <li data-i18n="newsletter_perk1">* Descuentos exclusivos para suscriptoras</li>
+          <li data-i18n="newsletter_perk2">* Perspectivas semanales de estrategia empresarial</li>
+          <li data-i18n="newsletter_perk3">* Acceso prioritario a nuevos lanzamientos</li>
+          <li data-i18n="newsletter_perk4">* Contenido de mentalidad CEO y estilo de vida</li>
         </ul>
         <form class="newsletter-form" id="newsletterForm" novalidate>
           <div class="newsletter-input-row">
@@ -388,32 +364,29 @@
               type="email"
               id="newsletterEmail"
               name="email"
-              placeholder="Your email address"
+              data-i18n-placeholder="newsletter_placeholder"
+              placeholder="Tu direccion de email"
               required
               aria-label="Email address"
               autocomplete="email"
             />
-            <button type="submit" class="btn btn-primary" id="newsletter-submit-btn">SUBSCRIBE</button>
+            <button type="submit" class="btn btn-primary" id="newsletter-submit-btn" data-i18n="newsletter_btn">SUSCRIBIRME</button>
           </div>
-          <p class="newsletter-consent">By subscribing you agree to our Privacy Policy. Unsubscribe anytime.</p>
-          <div class="newsletter-success" id="newsletterSuccess" hidden aria-live="polite">
-            ✦ Welcome to the Femmora family! Check your inbox.
+          <p class="newsletter-consent" data-i18n="newsletter_consent">Al suscribirte aceptas nuestra Politica de Privacidad. Cancela cuando quieras.</p>
+          <div class="newsletter-success" id="newsletterSuccess" hidden aria-live="polite" data-i18n="newsletter_success">
+            Bienvenida a la familia Femmora! Revisa tu bandeja de entrada.
           </div>
         </form>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="footer-inner">
-
       <div class="footer-brand">
         <img src="images/logo_trans.png" alt="Femmora" class="footer-logo-img" />
-        <p class="footer-tagline">Premium digital resources for women entrepreneurs. Strategy, design and mindset in one place.</p>
+        <p class="footer-tagline" data-i18n="footer_tagline">Recursos digitales premium para emprendedoras. Estrategia, diseno y mentalidad en un solo lugar.</p>
         <div class="footer-socials">
           <a href="#" aria-label="Instagram" class="footer-social-link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -426,53 +399,47 @@
           </a>
         </div>
       </div>
-
       <div class="footer-col">
-        <h4>SHOP</h4>
+        <h4 data-i18n="footer_col_shop">TIENDA</h4>
         <ul>
-          <li><a href="#">Femmora Business</a></li>
-          <li><a href="#">Creative Studio</a></li>
-          <li><a href="#">Femmora CEO</a></li>
-          <li><a href="#">All Products</a></li>
-          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#" data-i18n="footer_shop_business">Femmora Business</a></li>
+          <li><a href="#" data-i18n="footer_shop_creative">Creative Studio</a></li>
+          <li><a href="#" data-i18n="footer_shop_ceo">Femmora CEO</a></li>
+          <li><a href="#" data-i18n="footer_shop_all">Todos los Productos</a></li>
+          <li><a href="#" data-i18n="footer_shop_new">Novedades</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>RESOURCES</h4>
+        <h4 data-i18n="footer_col_resources">RECURSOS</h4>
         <ul>
-          <li><a href="#">Free Downloads</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Podcast</a></li>
-          <li><a href="#">Femmora Letters</a></li>
+          <li><a href="#" data-i18n="footer_res_free">Descargas Gratuitas</a></li>
+          <li><a href="#" data-i18n="footer_res_blog">Blog</a></li>
+          <li><a href="#" data-i18n="footer_res_podcast">Podcast</a></li>
+          <li><a href="#" data-i18n="footer_res_letters">Femmora Letters</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>COMPANY</h4>
+        <h4 data-i18n="footer_col_company">EMPRESA</h4>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Affiliates</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" data-i18n="footer_co_about">Sobre Nosotras</a></li>
+          <li><a href="#" data-i18n="footer_co_press">Prensa</a></li>
+          <li><a href="#" data-i18n="footer_co_affiliates">Afiliadas</a></li>
+          <li><a href="#" data-i18n="footer_co_contact">Contacto</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>LEGAL</h4>
+        <h4 data-i18n="footer_col_legal">LEGAL</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Refund Policy</a></li>
-          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#" data-i18n="footer_legal_privacy">Politica de Privacidad</a></li>
+          <li><a href="#" data-i18n="footer_legal_terms">Terminos y Condiciones</a></li>
+          <li><a href="#" data-i18n="footer_legal_refund">Politica de Reembolso</a></li>
+          <li><a href="#" data-i18n="footer_legal_cookies">Politica de Cookies</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="footer-bottom">
-      <span>© 2025 Femmora Studio. All rights reserved.</span>
-      <span class="footer-motto">Build the business. Design the brand. Become the Woman.</span>
+      <span data-i18n="footer_copy">2025 Femmora Studio. Todos los derechos reservados.</span>
+      <span class="footer-motto" data-i18n="footer_motto">Construye el negocio. Disena la marca. Conviertete en la Mujer.</span>
     </div>
   </footer>
 
