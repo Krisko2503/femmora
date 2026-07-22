@@ -19,6 +19,18 @@ if (navbar) {
   window.addEventListener('scroll', updateNavbar, { passive: true });
 }
 
+// ── Hero fade-out: entire hero section fades as user scrolls ────────────────
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    let scrollPos = window.scrollY;
+    // Fade out completely after 600px of scrolling
+    let calcOpacity = 1 - (scrollPos / 600);
+    hero.style.opacity = Math.max(calcOpacity, 0);
+  }
+});
+
+
 // ── Mobile burger menu ───────────────────────────────────────────────────────
 const burger     = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
