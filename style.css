@@ -417,6 +417,7 @@ section {
   max-width: 50%;      /* stays in the left half, clear of the laptop */
   color: #fff;
   padding-left: 10%;   /* push into the empty zone */
+  padding-right: 1.5rem;
   will-change: opacity, transform;
 }
 
@@ -432,7 +433,7 @@ section {
 
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
   font-weight: 700;
   line-height: 1.08;
   margin-bottom: 1.8rem;
@@ -1324,6 +1325,20 @@ footer {
 }
 
 /* ──────────────────────────────────────────────
+   RESPONSIVE — 768px  (tablets / large phones)
+────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 70%;
+    padding-left: 6%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 3.2rem);
+  }
+}
+
+/* ──────────────────────────────────────────────
    RESPONSIVE — 680px
 ────────────────────────────────────────────── */
 @media (max-width: 680px) {
@@ -1345,6 +1360,75 @@ footer {
 
   .parallax-gap--lg {
     height: 14vh;
+  }
+
+  /* Hero — stack content full width on small phones */
+  .hero {
+    align-items: flex-end;
+    padding-bottom: 5rem;
+    min-height: 520px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: left;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(21, 21, 21, .35) 0%,
+      rgba(21, 21, 21, .72) 60%,
+      rgba(21, 21, 21, .88) 100%
+    );
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+    line-height: 1.12;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-sub {
+    font-size: clamp(.82rem, 3.5vw, .96rem);
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: .55rem;
+    letter-spacing: .2em;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-actions {
+    gap: .75rem;
+  }
+
+  .hero-actions .btn {
+    font-size: .62rem;
+    padding: .7rem 1.4rem;
+    letter-spacing: .12em;
+  }
+
+  /* Navbar */
+  .navbar {
+    height: 80px;
+    padding: 0 1.2rem;
+  }
+
+  .navbar.scrolled {
+    height: 68px;
+  }
+
+  .logo-img {
+    max-height: 70px;
+  }
+
+  .navbar.scrolled .logo-img {
+    max-height: 58px;
   }
 
   .mission-inner {
@@ -1375,10 +1459,6 @@ footer {
     text-align: center;
   }
 
-  .hero-title {
-    font-size: clamp(2.2rem, 9vw, 3.4rem);
-  }
-
   .newsletter-input-row {
     flex-direction: column;
     border: none;
@@ -1401,10 +1481,84 @@ footer {
 }
 
 /* ──────────────────────────────────────────────
-   RESPONSIVE — 480px
+   RESPONSIVE — 480px  (small phones)
 ────────────────────────────────────────────── */
 @media (max-width: 480px) {
   .footer-inner {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    align-items: flex-end;
+    padding-bottom: 4rem;
+  }
+
+  .hero-content {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 9vw, 2.4rem);
+    line-height: 1.14;
+    margin-bottom: 1rem;
+  }
+
+  .hero-sub {
+    font-size: .84rem;
+    line-height: 1.7;
+    margin-bottom: 1.6rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar {
+    height: 68px;
+  }
+
+  .logo-img {
+    max-height: 58px;
+  }
+
+  .reviews-grid {
+    max-width: 100%;
+  }
+
+  .pillar-body {
+    padding: 1.8rem 1.4rem 2rem;
+  }
+
+  .newsletter-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .mission-section {
+    padding: 5rem 1.2rem;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   RESPONSIVE — 360px  (very small phones)
+────────────────────────────────────────────── */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: clamp(1.5rem, 10vw, 2rem);
+  }
+
+  .hero-eyebrow {
+    display: none;
+  }
+
+  .btn {
+    padding: .7rem 1.1rem;
+    font-size: .6rem;
   }
 }
