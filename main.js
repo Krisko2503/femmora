@@ -329,7 +329,7 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 function openMobileMenu() {
   mobileMenu.classList.add('open');
-  burger.classList.add('open');
+  burger.classList.add('active');          // triggers .mobile-menu-btn.active CSS icon swap
   burger.setAttribute('aria-expanded', 'true');
   burger.setAttribute('aria-label', 'Close menu');
   mobileMenu.setAttribute('aria-hidden', 'false');
@@ -338,7 +338,7 @@ function openMobileMenu() {
 
 function closeMobileMenu() {
   mobileMenu.classList.remove('open');
-  burger.classList.remove('open');
+  burger.classList.remove('active');       // reverts .mobile-menu-btn.active CSS icon swap
   burger.setAttribute('aria-expanded', 'false');
   burger.setAttribute('aria-label', 'Open menu');
   mobileMenu.setAttribute('aria-hidden', 'true');
