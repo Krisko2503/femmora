@@ -38,11 +38,33 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   margin: 0;
+  /* background is handled by body::before — see below */
+}
+
+/*
+  GLOBAL PARALLAX BACKGROUND — mobile-safe fixed pseudo-element
+  ─────────────────────────────────────────────────────────────
+  iOS Safari renders background-attachment:fixed incorrectly: the image
+  is painted at full-document size and then scaled, causing the massive
+  zoom / pixelation seen on mobile. The fix is to use a ::before
+  pseudo-element that is position:fixed and sized to the viewport.
+  It sits at z-index:-1 so every section and gap scrolls over it normally.
+*/
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;                        /* viewport-locked — no zoom bug */
   background-image: url('images/background.JPG');
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  z-index: -1;                          /* behind ALL content */
+  pointer-events: none;
+  will-change: transform;
+  -webkit-transform: translateZ(0);    /* GPU layer on iOS for smooth scroll */
+  transform: translateZ(0);
 }
 
 /* ──────────────────────────────────────────────
@@ -277,27 +299,56 @@ section {
   filter: none;
 }
 
-/* Mobile burger — hidden on desktop */
+/* Mobile burger — hidden on desktop, single toggle button */
 .nav-burger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
-  padding: .4rem;
+  padding: .5rem;
   position: absolute;
   right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2000;   /* always above the mobile menu overlay */
+  width: 36px;
+  height: 36px;
 }
 
-.nav-burger span {
+/* Hamburger bars */
+.burger-bar {
   display: block;
   width: 22px;
   height: 1.5px;
   background: rgba(255, 255, 255, .88);
-  transition: .3s;
+  transition: opacity .25s ease, transform .3s ease;
+  position: absolute;
+}
+
+.burger-bar:nth-child(1) { top: 11px; }
+.burger-bar:nth-child(2) { top: 18px; }
+.burger-bar:nth-child(3) { top: 25px; }
+
+/* Close × icon — hidden by default */
+.burger-close {
+  display: none;
+  color: rgba(255, 255, 255, .88);
+  font-size: 1.6rem;
+  line-height: 1;
+  pointer-events: none;
+  font-style: normal;
+}
+
+/* When menu is open: hide bars, show × */
+.nav-burger.open .burger-bar {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-burger.open .burger-close {
+  display: block;
 }
 
 /* ──────────────────────────────────────────────
@@ -389,22 +440,6 @@ section {
 .mobile-menu.open {
   opacity: 1;
   pointer-events: all;
-}
-
-.mobile-close {
-  position: absolute;
-  top: 1.8rem;
-  right: 1.8rem;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, .6);
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: color .2s;
-}
-
-.mobile-close:hover {
-  color: #fff;
 }
 
 .mobile-menu ul {

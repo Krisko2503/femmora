@@ -324,34 +324,53 @@ window.addEventListener('scroll', () => {
 });
 
 // ── Mobile burger menu ────────────────────────────────────────────────────────
-const burger      = document.getElementById('burger');
-const mobileMenu  = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
+const burger     = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
 
 function openMobileMenu() {
   mobileMenu.classList.add('open');
+  burger.classList.add('open');
   burger.setAttribute('aria-expanded', 'true');
+  burger.setAttribute('aria-label', 'Close menu');
   mobileMenu.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 
 function closeMobileMenu() {
   mobileMenu.classList.remove('open');
+  burger.classList.remove('open');
   burger.setAttribute('aria-expanded', 'false');
+  burger.setAttribute('aria-label', 'Open menu');
   mobileMenu.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
 if (burger && mobileMenu) {
-  burger.addEventListener('click', openMobileMenu);
-  mobileClose && mobileClose.addEventListener('click', closeMobileMenu);
+  // Single button toggles open/close
+  burger.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('open')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+
+  // Close when any nav link is clicked
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
+
+  // Close when any lang button inside the mobile menu is clicked
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close on Escape key
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
   });
 }
+
 
 // ── Smooth scroll ─────────────────────────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

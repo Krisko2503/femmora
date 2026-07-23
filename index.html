@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -39,13 +39,17 @@
       </li>
     </ul>
     <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+      <!-- Hamburger bars (shown when closed) -->
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <!-- Close X icon (shown when open) -->
+      <span class="burger-close" aria-hidden="true">&times;</span>
     </button>
   </nav>
 
-  <!-- Mobile menu -->
+  <!-- Mobile menu overlay -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <button class="mobile-close" id="mobileClose" aria-label="Close menu">X</button>
     <ul>
       <li><a href="#home"      class="mobile-link" data-i18n="nav_home">INICIO</a></li>
       <li><a href="#about"     class="mobile-link" data-i18n="nav_about">NOSOTRAS</a></li>
@@ -55,11 +59,11 @@
       <li><a href="#letters"   class="mobile-link" data-i18n="nav_letters">CARTAS</a></li>
     </ul>
     <div class="lang-switcher lang-switcher--mobile" id="langSwitcherMobile" aria-label="Language selector">
-      <span class="lang-btn" data-lang="bg" tabindex="0">BG</span>
+      <span class="lang-btn mobile-nav-link" data-lang="bg" tabindex="0">BG</span>
       <span class="lang-sep">|</span>
-      <span class="lang-btn" data-lang="es" tabindex="0">ES</span>
+      <span class="lang-btn mobile-nav-link" data-lang="es" tabindex="0">ES</span>
       <span class="lang-sep">|</span>
-      <span class="lang-btn" data-lang="en" tabindex="0">EN</span>
+      <span class="lang-btn mobile-nav-link" data-lang="en" tabindex="0">EN</span>
     </div>
   </div>
 
